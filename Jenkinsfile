@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        SERVER_IP = sh(script: 'curl -s http://169.254.169.254/latest/meta-data/public-ipv4', returnStdout: true).trim()
-    }
     tools {
         maven 'my_mvn'
     }
@@ -98,20 +95,12 @@ pipeline {
             junit 'target/surefire-reports/*.xml'
         }
         success {
-            echo "App URL: http://${SERVER_IP}:8090/manik-calculator/"
-            // emailext (
-            //     to: 'varunmanik1@gmail.com',
-            //     subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-            //     body: "The job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' completed successfully."
-            // )
+            echo 'Build succeeded!!!'
+            // You could add notification steps here
         }
         failure {
-            echo "Failed to deploy application to http://${SERVER_IP}:8090/manik-calculator/"
-            // emailext (
-            //     to: 'varunmanik1@gmail.com',
-            //     subject: "FAILURE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-            //     body: "The job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' failed."
-            // )
-        } 
+            echo 'Build failed!'
+            // You could add notification steps here
+        }
     }
 }
