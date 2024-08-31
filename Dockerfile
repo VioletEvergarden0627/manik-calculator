@@ -13,8 +13,11 @@ RUN mvn dependency:go-offline
 # Copy the source code into the working directory
 COPY src /app/src
 
+# Copy the checkstyle configuration file
+COPY checkstyle.xml /app/
+
 # Build the project
-RUN mvn clean package
+RUN mvn -X clean package
 
 # Use the official Tomcat image as the base image for the runtime
 FROM tomcat:9.0-jdk11
