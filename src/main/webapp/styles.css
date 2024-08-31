@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: #f5f5f5;
+	background-color: #d3d3d3; /* Changed background color to grey */
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -42,7 +42,7 @@ input[type="text"] {
 	border: none;
 	border-radius: 5px;
 	color: #333;
-	font-size: 16px;
+	font-size: 24px; /* Increased font size for larger numbers */
 	padding: 12px;
 	width: 100%;
 }
