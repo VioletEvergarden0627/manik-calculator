@@ -48,7 +48,7 @@ mvn clean docker:build
 Run the Docker container:
 
 ```
-docker run -d -p 8080:8080 --name manik-calculator-container manik-calculator
+docker run -p 8080:8080 varunmanik/manik-calculator:1.0-SNAPSHOT
 
 ```
 
