@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage("Checkout") {   
             steps {               	 
-                git branch: 'main', url: 'https://github.com/manikcloud/manik-calculator.git'        	 
+                git branch: 'main', url: 'https://github.com/VioletEvergarden0627/manik-calculator.git'        	 
             
                 // git branch: '8.1-addressbook', url: 'https://github.com/manikcloud/Jenkins-cicd.git'        	 
             }    
