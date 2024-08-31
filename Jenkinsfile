@@ -62,9 +62,10 @@ pipeline {
         //     }
         // }
 
-        stage('Checkstyle Analysis') {
+        stage('Build and Static Analysis') {
             steps {
-                checkstyle '**/target/checkstyle-result.xml'
+                sh 'mvn checkstyle:checkstyle'
+                recordIssues tools: [checkStyle(pattern: '**/checkstyle-result.xml')]
             }
         }
 
