@@ -68,12 +68,13 @@ pipeline {
                 recordIssues tools: [checkStyle(pattern: '**/checkstyle-result.xml')]
             }
         }
-        stage('FindBugs Analysis') {
+        stage('SpotBugs Analysis') {
             steps {
-                sh 'mvn findbugs:findbugs'
-                recordIssues tools: [findBugs(pattern: '**/findbugsXml.xml')]
+                sh 'mvn spotbugs:check'
+                recordIssues tools: [spotBugs(pattern: '**/target/spotbugsXml.xml')]
             }
         }
+
 
 
 
