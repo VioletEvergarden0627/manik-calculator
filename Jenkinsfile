@@ -66,6 +66,12 @@ pipeline {
                 recordIssues tools: [checkStyle(pattern: '/checkstyle-result.xml')]
             }
         }
+        stage('FindBugs Analysis') {
+            steps {
+                sh 'mvn findbugs:findbugs'
+                recordIssues tools: [findBugs(pattern: '**/findbugsXml.xml')]
+            }
+        }
         
         // stage("FindBugs Analysis") {
         //     steps {
