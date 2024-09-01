@@ -54,6 +54,10 @@ docker run -p 8080:8080 varunmanik/manik-calculator:1.0-SNAPSHOT
 
 Access the application in your browser at http://localhost:8080.
 
+## Modification to Code
+pom.xml file maven dependencies changed from bugfinder to bugspotter
+Modified dockerfile 
+
 ## Testing
 ### Smoke Test
 A smoke test script is provided in the project. To run the smoke test, execute the following command in the project root directory:
