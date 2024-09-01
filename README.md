@@ -16,9 +16,10 @@ Manik Calculator is a Java-based web application that allows users to perform ba
 
 ## Prerequisites
 
-- Java Development Kit (JDK) installed on your system
-- Maven installed on your system
-- Docker installed on your system
+- Java Development Kit (JDK) installed on your system. [Download JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
+- Maven installed on your system. [Download Maven](https://maven.apache.org/download.cgi)
+- Docker installed on your system. [Download Docker](https://www.docker.com/products/docker-desktop)
+
 
 ## Installation
 
