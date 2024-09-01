@@ -1,0 +1,7 @@
+version: '3'
+services:
+  manik-calculator:
+    image: varunmanik/manik-calculator:1.0-SNAPSHOT
+    ports:
+      - "8082:8080"  # Mapping host port 8082 to container port 8080
+    restart: always 
